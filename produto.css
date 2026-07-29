@@ -1,0 +1,437 @@
+/* =========================================================
+   PÁGINA DE PRODUTO - E-COMMERCE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONFIGURAÇÕES GERAIS
+   --------------------------------------------------------- */
+
+body.product-page {
+    margin: 0;
+
+    background: #faf8f5;
+    color: #172d43;
+
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER DO PRODUTO
+   --------------------------------------------------------- */
+
+.product-header {
+    height: 78px;
+
+    padding: 0 max(28px, calc((100% - 1120px) / 2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e9e4df;
+}
+
+
+/* ---------------------------------------------------------
+   CARRINHO
+   --------------------------------------------------------- */
+
+.product-cart {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.product-cart img {
+    width: 23px;
+}
+
+
+/* Quantidade de produtos */
+
+.product-cart small {
+    position: absolute;
+
+    right: -10px;
+    top: -9px;
+
+    width: 16px;
+    height: 16px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #f04d57;
+    color: #ffffff;
+
+    font: 700 9px Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   CONTEÚDO PRINCIPAL
+   --------------------------------------------------------- */
+
+.product-main {
+    max-width: 1120px;
+
+    margin: auto;
+
+    padding: 35px 24px 75px;
+}
+
+
+/* ---------------------------------------------------------
+   LINK VOLTAR
+   --------------------------------------------------------- */
+
+.back-link {
+    color: #f04d57;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   AVISO
+   --------------------------------------------------------- */
+
+.product-notice {
+    margin: 21px 0 -2px;
+    padding: 12px 15px;
+
+    background: #e6f5e9;
+    color: #2d7144;
+
+    font-size: 12px;
+}
+
+.product-notice a {
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   DETALHES DO PRODUTO
+   --------------------------------------------------------- */
+
+.product-detail {
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 66px;
+
+    align-items: center;
+
+    margin-top: 32px;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGEM DO PRODUTO
+   --------------------------------------------------------- */
+
+.detail-image {
+    position: relative;
+
+    height: 550px;
+
+    background: #f0ece7;
+}
+
+.detail-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Etiqueta do produto */
+
+.detail-image > span {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 6px 10px;
+
+    border-radius: 18px;
+
+    background: #f04d57;
+    color: #ffffff;
+
+    font: bold 10px Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMAÇÕES DO PRODUTO
+   --------------------------------------------------------- */
+
+.detail-info h1 {
+    margin: 0;
+
+    font: 700 43px/1.05 'Playfair Display', Georgia, serif;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* Descrição */
+
+.detail-description {
+    max-width: 390px;
+
+    margin: 18px 0;
+
+    color: #77736e;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   PREÇO
+   --------------------------------------------------------- */
+
+.detail-price {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 27px;
+}
+
+.detail-price strong {
+    font-size: 25px;
+}
+
+.detail-price del {
+    color: #a29d98;
+
+    font-size: 12px;
+}
+
+
+/* Parcelamento */
+
+.installments {
+    margin: 6px 0 27px;
+
+    color: #77736e;
+
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   QUANTIDADE
+   --------------------------------------------------------- */
+
+.quantity-label {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.quantity-label select {
+    padding: 9px 30px 9px 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd7d1;
+}
+
+.quantity-label span {
+    color: #77736e;
+
+    font-weight: 400;
+}
+
+
+/* ---------------------------------------------------------
+   AÇÕES DO PRODUTO
+   --------------------------------------------------------- */
+
+.product-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+/* Botões */
+
+.outline-button,
+.buy-button {
+    height: 49px;
+
+    cursor: pointer;
+
+    font: 700 10px 'DM Sans', Arial, sans-serif;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* Botão secundário */
+
+.outline-button {
+    background: #ffffff;
+
+    border: 1px solid #172d43;
+
+    color: #172d43;
+}
+
+
+/* Botão de compra */
+
+.buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 17px;
+
+    background: #f04d57;
+
+    border: 0;
+
+    color: #ffffff;
+}
+
+.buy-button span {
+    font-size: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   BENEFÍCIOS
+   --------------------------------------------------------- */
+
+.detail-benefits {
+    display: grid;
+
+    gap: 10px;
+
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #e8e3de;
+
+    color: #667480;
+
+    font-size: 11px;
+}
+
+.detail-benefits span::before {
+    color: #f04d57;
+}
+
+
+/* ---------------------------------------------------------
+   PRODUTO ESGOTADO
+   --------------------------------------------------------- */
+
+.out-of-stock {
+    padding: 14px;
+
+    background: #fbe9ea;
+
+    color: #a3333e;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Header */
+
+    .product-header {
+        padding: 0 18px;
+    }
+
+
+    /* Conteúdo */
+
+    .product-main {
+        padding: 25px 16px;
+    }
+
+
+    /* Detalhes */
+
+    .product-detail {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+
+    /* Imagem */
+
+    .detail-image {
+        height: 390px;
+    }
+
+
+    /* Título */
+
+    .detail-info h1 {
+        font-size: 36px;
+    }
+
+
+    /* Botões */
+
+    .product-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Carrinho no mobile */
+
+    .product-cart {
+        font-size: 0;
+    }
+
+    .product-cart img {
+        width: 25px;
+    }
+}
