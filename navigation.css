@@ -1,0 +1,182 @@
+/* =========================================================
+   MENU DROPDOWN - E-COMMERCE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   ITEM DO MENU
+   --------------------------------------------------------- */
+
+.menu-item {
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÃO DO MENU
+   --------------------------------------------------------- */
+
+.menu-item > button {
+    padding: 18px 0;
+
+    background: transparent;
+    border: 0;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Seta do dropdown */
+
+.menu-item > button::after {
+    content: '⌄';
+
+    margin-left: 5px;
+
+    color: #f04d57;
+
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   SUBMENU
+   --------------------------------------------------------- */
+
+.submenu {
+    position: absolute;
+    z-index: 20;
+
+    top: 47px;
+    left: 50%;
+
+    min-width: 185px;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #ece7e2;
+
+    box-shadow: 0 14px 30px rgba(23, 45, 67, 0.13);
+
+    transform: translate(-50%, 8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.2s ease;
+}
+
+
+/* ---------------------------------------------------------
+   DETALHE SUPERIOR DO SUBMENU
+   --------------------------------------------------------- */
+
+.submenu::before {
+    content: '';
+
+    position: absolute;
+
+    top: -6px;
+    left: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    background: #ffffff;
+
+    border-left: 1px solid #ece7e2;
+    border-top: 1px solid #ece7e2;
+
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* ---------------------------------------------------------
+   LINKS DO SUBMENU
+   --------------------------------------------------------- */
+
+.submenu a {
+    position: relative;
+
+    display: block;
+
+    padding: 9px 11px;
+
+    color: #455362;
+
+    font-size: 11px;
+
+    transition: 0.15s;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.submenu a:hover {
+    background: #fff6f6;
+
+    color: #f04d57;
+}
+
+
+/* ---------------------------------------------------------
+   EXIBIÇÃO DO SUBMENU
+   --------------------------------------------------------- */
+
+/*
+   O submenu aparece quando o usuário:
+   - Passa o mouse sobre o item
+   - Navega utilizando o teclado
+*/
+
+.menu-item:hover .submenu,
+.menu-item:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translate(-50%, 0);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+    /* Botão do menu */
+
+    .menu-item > button {
+        padding: 16px 0;
+    }
+
+
+    /* Submenu no mobile */
+
+    .submenu {
+        left: 0;
+
+        transform: translate(0, 8px);
+    }
+
+
+    /* Exibição do submenu */
+
+    .menu-item:hover .submenu,
+    .menu-item:focus-within .submenu {
+        transform: translate(0, 0);
+    }
+}
