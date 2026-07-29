@@ -1,0 +1,544 @@
+/* =========================================================
+   CARRINHO DE COMPRAS - E-COMMERCE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONFIGURAÇÕES GERAIS
+   --------------------------------------------------------- */
+
+body.cart-body {
+    margin: 0;
+
+    background: #f8f6f3;
+    color: #172d43;
+
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   CONTAINER
+   --------------------------------------------------------- */
+
+.cart-container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER DO CARRINHO
+   --------------------------------------------------------- */
+
+.cart-top {
+    height: 76px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e9e4df;
+}
+
+.cart-top .cart-container {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-top .brand {
+    font-size: 22px;
+}
+
+
+/* Link para continuar comprando */
+
+.continue-link {
+    color: #f04d57;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.continue-link::before {
+    content: '←';
+
+    margin-right: 8px;
+
+    font-size: 17px;
+}
+
+
+/* ---------------------------------------------------------
+   CONTEÚDO PRINCIPAL
+   --------------------------------------------------------- */
+
+.cart-main {
+    padding: 52px 0 70px;
+}
+
+
+/* ---------------------------------------------------------
+   CABEÇALHO DO CARRINHO
+   --------------------------------------------------------- */
+
+.cart-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.cart-heading .eyebrow {
+    margin: 0 0 10px;
+}
+
+.cart-heading h1 {
+    margin: 0;
+
+    font: 700 39px/1 'Playfair Display', Georgia, serif;
+
+    letter-spacing: -1.2px;
+}
+
+.cart-heading > span {
+    color: #77736e;
+
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   LAYOUT DO CARRINHO
+   --------------------------------------------------------- */
+
+.cart-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.55fr)
+        minmax(290px, 0.72fr);
+
+    gap: 26px;
+
+    align-items: start;
+}
+
+
+/* ---------------------------------------------------------
+   LISTA DE PRODUTOS
+   --------------------------------------------------------- */
+
+.cart-items {
+    padding: 0 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e4df;
+}
+
+
+/* Produto */
+
+.cart-item {
+    display: grid;
+
+    grid-template-columns: 120px 1fr auto;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 21px 0;
+
+    border-bottom: 1px solid #eee9e4;
+}
+
+.cart-item:last-child {
+    border-bottom: 0;
+}
+
+
+/* Imagem do produto */
+
+.cart-item img {
+    width: 120px;
+    height: 135px;
+
+    object-fit: cover;
+
+    background: #f0ece7;
+}
+
+
+/* Informações do produto */
+
+.cart-item small {
+    color: #99938e;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.cart-item h2 {
+    margin: 6px 0 9px;
+
+    font-size: 16px;
+}
+
+.cart-item p {
+    margin: 0;
+
+    color: #77736e;
+
+    font-size: 12px;
+}
+
+.cart-item p b {
+    color: #172d43;
+}
+
+
+/* ---------------------------------------------------------
+   AÇÕES DO PRODUTO
+   --------------------------------------------------------- */
+
+.cart-item-actions {
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: right;
+}
+
+.cart-item-actions strong {
+    font-size: 15px;
+}
+
+
+/* Remover produto */
+
+.remove-link {
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+    color: #9a9691;
+
+    cursor: pointer;
+
+    font: 11px 'DM Sans', Arial, sans-serif;
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   RESUMO DO PEDIDO
+   --------------------------------------------------------- */
+
+.cart-summary {
+    position: sticky;
+    top: 20px;
+
+    padding: 28px;
+
+    background: #172d43;
+
+    color: #ffffff;
+}
+
+.cart-summary h2 {
+    margin: 0 0 25px;
+
+    font: 700 25px 'Playfair Display', Georgia, serif;
+}
+
+
+/* Linha do resumo */
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+    color: #c8d3dc;
+
+    font-size: 12px;
+}
+
+.summary-row strong {
+    color: #ffffff;
+}
+
+
+/* Total */
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    padding: 20px 0 24px;
+}
+
+.summary-total span {
+    font-size: 12px;
+}
+
+.summary-total strong {
+    font-size: 23px;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÃO DE FINALIZAR COMPRA
+   --------------------------------------------------------- */
+
+.checkout-button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 17px;
+
+    background: #f04d57;
+
+    border: 0;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font: 700 11px 'DM Sans', Arial, sans-serif;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+.checkout-button span {
+    font-size: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   LIMPAR CARRINHO
+   --------------------------------------------------------- */
+
+.clear-link {
+    display: block;
+
+    margin: 17px 0 0;
+
+    color: #c8d3dc;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   GARANTIAS
+   --------------------------------------------------------- */
+
+.cart-assurances {
+    display: grid;
+    gap: 10px;
+
+    margin: 23px 0 0;
+
+    color: #697d8e;
+
+    font-size: 10px;
+}
+
+.cart-assurances span::before {
+    content: '✓';
+
+    margin-right: 7px;
+
+    color: #f7abb0;
+
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   CARRINHO VAZIO
+   --------------------------------------------------------- */
+
+.empty-cart {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 65px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9e4df;
+
+    text-align: center;
+}
+
+
+/* Ícone */
+
+.empty-icon {
+    width: 62px;
+    height: 62px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto 19px;
+    padding: 15px;
+
+    border-radius: 50%;
+
+    background: #fbeaec;
+}
+
+
+/* Título */
+
+.empty-cart h2 {
+    margin: 0;
+
+    font: 700 28px 'Playfair Display', Georgia, serif;
+}
+
+
+/* Descrição */
+
+.empty-cart p {
+    margin: 13px 0 25px;
+
+    color: #77736e;
+
+    font-size: 13px;
+}
+
+
+/* Botão */
+
+.empty-cart .button {
+    justify-content: center;
+}
+
+
+/* ---------------------------------------------------------
+   AVISO
+   --------------------------------------------------------- */
+
+.cart-notice {
+    max-width: 1092px;
+
+    margin: 21px auto -25px;
+
+    padding: 12px 16px;
+
+    background: #fff1cf;
+
+    color: #8b5a00;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    /* Container */
+
+    .cart-container {
+        padding: 0 16px;
+    }
+
+
+    /* Conteúdo */
+
+    .cart-main {
+        padding: 35px 0;
+    }
+
+
+    /* Layout */
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Título */
+
+    .cart-heading h1 {
+        font-size: 33px;
+    }
+
+    .cart-heading > span {
+        display: none;
+    }
+
+
+    /* Produtos */
+
+    .cart-items {
+        padding: 0 16px;
+    }
+
+    .cart-item {
+        grid-template-columns: 82px 1fr;
+
+        gap: 13px;
+    }
+
+    .cart-item img {
+        width: 82px;
+        height: 98px;
+    }
+
+
+    /* Ações */
+
+    .cart-item-actions {
+        grid-column: 2;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+    }
+
+
+    /* Resumo */
+
+    .cart-summary {
+        position: static;
+    }
+}
