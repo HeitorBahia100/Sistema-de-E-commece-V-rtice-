@@ -1,0 +1,497 @@
+/* =========================================================
+   PÁGINAS DE AUTENTICAÇÃO - E-COMMERCE
+   Login / Cadastro
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONFIGURAÇÕES GERAIS
+   --------------------------------------------------------- */
+
+body.auth-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 42px 20px 70px;
+
+    position: relative;
+    overflow-x: hidden;
+
+    background: linear-gradient(
+        125deg,
+        #f9f6f2 0%,
+        #ffffff 53%,
+        #e8eff0 100%
+    );
+
+    color: #172d43;
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+   --------------------------------------------------------- */
+
+.auth-logo {
+    position: absolute;
+    z-index: 2;
+
+    top: 31px;
+    left: 42px;
+}
+
+
+/* ---------------------------------------------------------
+   ELEMENTOS DECORATIVOS
+   --------------------------------------------------------- */
+
+.auth-decoration {
+    position: fixed;
+
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+
+/* Decoração superior direita */
+
+.auth-decoration.one {
+    width: 470px;
+    height: 470px;
+
+    right: -220px;
+    top: -185px;
+
+    border: 52px solid rgba(240, 77, 87, 0.08);
+}
+
+
+/* Decoração inferior esquerda */
+
+.auth-decoration.two {
+    width: 290px;
+    height: 290px;
+
+    left: -175px;
+    bottom: -135px;
+
+    background: rgba(23, 45, 67, 0.045);
+}
+
+
+/* ---------------------------------------------------------
+   CARD DE AUTENTICAÇÃO
+   --------------------------------------------------------- */
+
+.auth-card {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 470px);
+
+    margin: 25px auto 0;
+    padding: 38px 46px 34px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(23, 45, 67, 0.07);
+
+    box-shadow: 0 27px 70px rgba(23, 45, 67, 0.13);
+}
+
+
+/* Card de cadastro */
+
+.register-card {
+    margin-top: 5px;
+    padding-top: 30px;
+}
+
+
+/* ---------------------------------------------------------
+   CABEÇALHO DO CARD
+   --------------------------------------------------------- */
+
+.card-top {
+    position: relative;
+}
+
+
+/* Ícone */
+
+.card-icon {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #fbe9ea;
+    color: #f04d57;
+
+    font-weight: 700;
+}
+
+
+/* Texto superior */
+
+.auth-card .eyebrow {
+    margin: 0 0 13px;
+
+    color: #f04d57;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* Título */
+
+.auth-card h1 {
+    margin: 0;
+
+    font: 700 38px/1.02 'Playfair Display', Georgia, serif;
+
+    letter-spacing: -1.5px;
+}
+
+.auth-card h1 em {
+    color: #f04d57;
+    font-weight: 600;
+}
+
+
+/* Subtítulo */
+
+.auth-subtitle {
+    max-width: 315px;
+
+    margin: 16px 0 26px;
+
+    color: #77736e;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   FORMULÁRIO
+   --------------------------------------------------------- */
+
+.auth-form {
+    display: grid;
+    gap: 15px;
+}
+
+
+/* Labels */
+
+.auth-form > label {
+    display: grid;
+    gap: 7px;
+
+    color: #33475a;
+}
+
+.auth-form > label > span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   INPUTS
+   --------------------------------------------------------- */
+
+.auth-form input:not([type="checkbox"]) {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 13px;
+
+    background: #ffffff;
+    color: #172d43;
+
+    border: 1px solid #ded9d3;
+    border-radius: 2px;
+
+    outline: none;
+
+    font: 13px 'DM Sans', Arial, sans-serif;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+
+    box-sizing: border-box;
+}
+
+
+/* Foco dos inputs */
+
+.auth-form input:focus {
+    border-color: #f04d57;
+
+    box-shadow: 0 0 0 3px rgba(240, 77, 87, 0.1);
+}
+
+
+/* ---------------------------------------------------------
+   OPÇÕES DO FORMULÁRIO
+   --------------------------------------------------------- */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 1px 0 4px;
+
+    color: #77736e;
+
+    font-size: 11px;
+}
+
+
+/* Checkbox e termos */
+
+.form-options label,
+.terms {
+    display: flex !important;
+    align-items: center;
+    gap: 7px;
+
+    font-weight: 400 !important;
+}
+
+.form-options label span,
+.terms span {
+    font-size: 11px;
+
+    font-weight: 400 !important;
+
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+
+/* Links */
+
+.form-options a,
+.auth-switch a {
+    color: #e43f4a;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÃO PRINCIPAL
+   --------------------------------------------------------- */
+
+.auth-form .button {
+    width: 100%;
+
+    margin-top: 3px;
+    padding: 15px 18px;
+
+    border: 0;
+
+    cursor: pointer;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* Efeito hover */
+
+.auth-form .button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 22px rgba(240, 77, 87, 0.22);
+}
+
+
+/* ---------------------------------------------------------
+   DIVISOR
+   --------------------------------------------------------- */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 25px 0 0;
+
+    color: #aaa49f;
+
+    font-size: 10px;
+}
+
+
+/* Linhas laterais */
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #ece8e3;
+}
+
+
+/* ---------------------------------------------------------
+   LINK ENTRE LOGIN E CADASTRO
+   --------------------------------------------------------- */
+
+.auth-switch {
+    margin: 16px 0 0;
+
+    text-align: center;
+
+    color: #77736e;
+
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   MENSAGEM DE ERRO
+   --------------------------------------------------------- */
+
+.form-error {
+    margin-bottom: 18px;
+    padding: 11px 13px;
+
+    border-left: 3px solid #e43f4a;
+
+    background: #fde9ea;
+    color: #a22c37;
+
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   TERMOS
+   --------------------------------------------------------- */
+
+.terms {
+    margin-top: 2px;
+
+    color: #77736e;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   RODAPÉ
+   --------------------------------------------------------- */
+
+.auth-foot {
+    position: relative;
+    z-index: 1;
+
+    margin: 25px 0 0;
+
+    text-align: center;
+
+    color: #8c8985;
+
+    font-size: 10px;
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Página */
+
+    body.auth-page {
+        padding: 85px 16px 35px;
+    }
+
+
+    /* Logo */
+
+    .auth-logo {
+        top: 25px;
+        left: 24px;
+    }
+
+
+    /* Card */
+
+    .auth-card {
+        margin: 0;
+        padding: 31px 25px;
+    }
+
+
+    /* Título */
+
+    .auth-card h1 {
+        font-size: 34px;
+    }
+
+
+    /* Decoração */
+
+    .auth-decoration.one {
+        width: 300px;
+        height: 300px;
+
+        right: -160px;
+        top: -110px;
+
+        border-width: 32px;
+    }
+
+
+    /* Opções */
+
+    .form-options {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    /* Cadastro */
+
+    .register-card {
+        padding-top: 29px;
+    }
+
+
+    /* Rodapé */
+
+    .auth-foot {
+        margin-top: 20px;
+    }
+}
