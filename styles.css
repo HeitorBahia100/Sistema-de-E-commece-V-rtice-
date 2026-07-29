@@ -1,0 +1,980 @@
+/* =========================================================
+   VÉRTICE - ESTILOS PRINCIPAIS DO E-COMMERCE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   VARIÁVEIS
+   --------------------------------------------------------- */
+
+:root {
+    --ink: #172d43;
+    --coral: #f04d57;
+    --cream: #faf8f5;
+    --line: #e9e4df;
+    --muted: #77736e;
+}
+
+
+/* ---------------------------------------------------------
+   RESET E CONFIGURAÇÕES GERAIS
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #ffffff;
+    color: var(--ink);
+
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------
+   CONTAINER
+   --------------------------------------------------------- */
+
+.container {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+/* =========================================================
+   BARRA SUPERIOR
+   ========================================================= */
+
+.topbar {
+    background: #f4f1ed;
+    color: #595958;
+
+    font-size: 11px;
+    letter-spacing: 0.2px;
+}
+
+.topbar .container {
+    height: 33px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   HEADER PRINCIPAL
+   ========================================================= */
+
+.main-header {
+    background: #ffffff;
+}
+
+.header-row {
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+   --------------------------------------------------------- */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.brand b {
+    width: 27px;
+    height: 27px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--coral);
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   CAMPO DE BUSCA
+   --------------------------------------------------------- */
+
+.search {
+    height: 42px;
+
+    max-width: 500px;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 15px;
+
+    background: #f7f6f4;
+
+    color: #85827f;
+}
+
+.search span {
+    font-size: 25px;
+    line-height: 0;
+}
+
+.search input {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    font: 12px inherit;
+}
+
+
+/* ---------------------------------------------------------
+   AÇÕES DO HEADER
+   --------------------------------------------------------- */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 21px;
+
+    font-size: 28px;
+}
+
+
+/* Carrinho */
+
+.cart {
+    position: relative;
+
+    font-size: 26px;
+}
+
+.cart small {
+    position: absolute;
+
+    top: -5px;
+    right: -10px;
+
+    width: 16px;
+    height: 16px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--coral);
+    color: #ffffff;
+
+    font: bold 10px Arial, sans-serif;
+}
+
+
+/* =========================================================
+   MENU DE NAVEGAÇÃO
+   ========================================================= */
+
+.nav-wrap {
+    border-top: 1px solid #f2efeb;
+    border-bottom: 1px solid #ebe7e2;
+}
+
+.menu {
+    height: 51px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 39px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.menu .sale {
+    color: var(--coral);
+}
+
+
+/* =========================================================
+   AVISO
+   ========================================================= */
+
+.notice {
+    padding: 12px;
+
+    background: #e2f3e8;
+    color: #205d3a;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.notice a {
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 485px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.07fr;
+
+    margin-top: 26px;
+
+    overflow: hidden;
+
+    background: #f2eee9;
+}
+
+
+/* Texto */
+
+.hero-copy {
+    align-self: center;
+
+    padding: 76px 26px 55px 68px;
+}
+
+
+/* Texto pequeno */
+
+.eyebrow {
+    margin: 0 0 14px;
+
+    color: var(--coral);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* Títulos */
+
+.hero h1,
+.section-heading h2,
+.newsletter h2 {
+    margin: 0;
+
+    font: 700 48px/1.1 'Playfair Display', Georgia, serif;
+
+    letter-spacing: -1.8px;
+}
+
+.hero h1 em {
+    color: var(--coral);
+
+    font-weight: 600;
+}
+
+
+/* Descrição */
+
+.hero-copy > p:not(.eyebrow) {
+    max-width: 345px;
+
+    margin: 22px 0 28px;
+
+    color: #6e6a65;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÃO PRINCIPAL
+   --------------------------------------------------------- */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 26px;
+
+    padding: 14px 18px;
+
+    background: var(--coral);
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+.button span {
+    font-size: 17px;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGEM DO HERO
+   --------------------------------------------------------- */
+
+.hero-image {
+    position: relative;
+
+    min-height: 450px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center 30%;
+}
+
+
+/* Selo */
+
+.hero-stamp {
+    position: absolute;
+
+    right: 23px;
+    bottom: 25px;
+
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: var(--coral);
+    color: #ffffff;
+
+    transform: rotate(-12deg);
+
+    text-transform: uppercase;
+}
+
+.hero-stamp strong {
+    font: italic 19px Georgia, serif;
+}
+
+.hero-stamp span {
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PROMOÇÕES
+   ========================================================= */
+
+.promos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.promo {
+    min-height: 166px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 23px 25px;
+
+    color: #ffffff;
+
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.promo span {
+    font-size: 10px;
+
+    opacity: 0.8;
+}
+
+.promo strong {
+    margin: 7px 0 auto;
+
+    font: 600 25px/1.08 'Playfair Display', Georgia, serif;
+}
+
+.promo i {
+    font-size: 10px;
+
+    font-style: normal;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Imagens das promoções */
+
+.coral {
+    background:
+        #ef5960
+        url('https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=700&q=75')
+        center / cover;
+}
+
+.navy {
+    background:
+        #263f59
+        url('https://images.unsplash.com/photo-1585488434455-60a9db2a94f8?auto=format&fit=crop&w=700&q=75')
+        center / cover;
+}
+
+.sand {
+    background:
+        #b58f7d
+        url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=75')
+        center / cover;
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+   ========================================================= */
+
+.benefits {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.benefits .container {
+    min-height: 82px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+}
+
+.benefits .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    border-right: 1px solid var(--line);
+}
+
+.benefits .container > div:last-child {
+    border: 0;
+}
+
+.benefits b {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.benefits p {
+    display: grid;
+
+    gap: 2px;
+
+    margin: 0;
+
+    font-size: 11px;
+}
+
+.benefits span {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   PRODUTOS
+   ========================================================= */
+
+.products {
+    padding-top: 66px;
+    padding-bottom: 75px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 26px;
+}
+
+.section-heading h2 {
+    font-size: 31px;
+}
+
+.section-heading > a {
+    padding-bottom: 5px;
+
+    color: var(--coral);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* Grid */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.product-card {
+    min-width: 0;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGEM DO PRODUTO
+   --------------------------------------------------------- */
+
+.product-photo {
+    position: relative;
+
+    height: 292px;
+
+    display: block;
+
+    overflow: hidden;
+
+    background: #f4f1ec;
+}
+
+.product-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Badge de desconto */
+
+.product-photo span {
+    position: absolute;
+
+    top: 11px;
+    left: 11px;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    background: var(--coral);
+    color: #ffffff;
+
+    font: bold 9px Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMAÇÕES DO PRODUTO
+   --------------------------------------------------------- */
+
+.product-info {
+    position: relative;
+
+    padding: 13px 2px;
+}
+
+.product-info p {
+    margin: 0 0 5px;
+
+    color: #9a9691;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.product-info h3 {
+    margin: 0 0 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.product-info strong {
+    font-size: 13px;
+}
+
+.product-info del {
+    margin-left: 6px;
+
+    color: #aaa;
+
+    font-size: 10px;
+}
+
+
+/* Adicionar ao carrinho */
+
+.add {
+    position: absolute;
+
+    right: 0;
+    bottom: 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--coral);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.add span {
+    font-size: 19px;
+
+    line-height: 10px;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.newsletter {
+    padding: 48px 0;
+
+    background: #172d43;
+
+    color: #ffffff;
+}
+
+.newsletter .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newsletter .eyebrow {
+    color: #f49a9f;
+}
+
+.newsletter h2 {
+    font-size: 29px;
+
+    letter-spacing: -1px;
+}
+
+
+/* Formulário */
+
+.newsletter form {
+    width: 390px;
+    height: 45px;
+
+    display: flex;
+}
+
+.newsletter input {
+    flex: 1;
+
+    padding: 0 15px;
+
+    border: 0;
+
+    font: 12px inherit;
+}
+
+.newsletter button {
+    padding: 0 18px;
+
+    border: 0;
+
+    background: var(--coral);
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font: 700 10px inherit;
+
+    letter-spacing: 0.4px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 42px 0;
+
+    background: #102337;
+
+    color: #dbe2e9;
+}
+
+footer .brand {
+    color: #ffffff;
+}
+
+footer p {
+    margin: 15px 0 29px;
+
+    color: #93a0ad;
+
+    font-size: 12px;
+}
+
+footer small {
+    color: #718191;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+    /* -----------------------------------------------------
+       TOPBAR
+       ----------------------------------------------------- */
+
+    .topbar .container {
+        justify-content: center;
+    }
+
+    .topbar span:last-child {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .header-row {
+        height: auto;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+
+    /* Busca */
+
+    .search {
+        order: 3;
+
+        flex-basis: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU
+       ----------------------------------------------------- */
+
+    .menu {
+        justify-content: flex-start;
+
+        gap: 19px;
+
+        overflow-x: auto;
+    }
+
+    .menu a:nth-child(n + 5) {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        margin-top: 0;
+    }
+
+    .hero-copy {
+        padding: 54px 29px 45px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        min-height: 330px;
+    }
+
+
+    /* -----------------------------------------------------
+       PROMOÇÕES
+       ----------------------------------------------------- */
+
+    .promos {
+        grid-template-columns: 1fr;
+    }
+
+    .promo {
+        min-height: 135px;
+    }
+
+
+    /* -----------------------------------------------------
+       BENEFÍCIOS
+       ----------------------------------------------------- */
+
+    .benefits .container {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .benefits .container > div {
+        justify-content: flex-start;
+
+        border: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       PRODUTOS
+       ----------------------------------------------------- */
+
+    .products {
+        padding-top: 45px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .product-photo {
+        height: 220px;
+    }
+
+
+    /* -----------------------------------------------------
+       NEWSLETTER
+       ----------------------------------------------------- */
+
+    .newsletter .container {
+        display: block;
+    }
+
+    .newsletter form {
+        width: 100%;
+
+        margin-top: 23px;
+    }
+
+
+    /* -----------------------------------------------------
+       TÍTULOS
+       ----------------------------------------------------- */
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+}
